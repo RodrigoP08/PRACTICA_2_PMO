@@ -3,18 +3,18 @@ on:
   push:
     branches:
       - main
-    jobs:
-      send-email:
-        runs-on: ubuntu-latest
-        steps:
-          - name: notification
-            uses: dawidd6/action-send-mail@v3
-            with:
-              server-address: smtp.office365.com
-              sever_port: 587
-              username: ${{ secrets.MAIL }}
-              password: ${{ secrets.PASS }}
-              subject: "shalom"
-              to: rodrigo.penam@iteso.mx, haziel.murillo@iteso.mx, victor.ortega@iteso.mx
-              from: ${{ secrets.EMAIL_USER }}
-              body: commit en main nih
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server-address: smtp.office365.com
+          sever_port: 587
+          username: ${{ secrets.MAIL }}
+          password: ${{ secrets.PASS }}
+          subject: "shalom"
+          to: rodrigo.penam@iteso.mx, haziel.murillo@iteso.mx, victor.ortega@iteso.mx
+          from: ${{ secrets.EMAIL_USER }}
+          body: commit en main nih
