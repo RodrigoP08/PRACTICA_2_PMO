@@ -10,7 +10,7 @@ jobs:
       - name: notification
         uses: dawidd6/action-send-mail@v3
         with:
-          server-address: ://office365.com
+          server_address: smtp.office365.com
           sever_port: 587
           username: ${{ secrets.MAIL }}
           password: ${{ secrets.PASS }}
