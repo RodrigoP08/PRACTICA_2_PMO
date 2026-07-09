@@ -1,0 +1,19 @@
+name: Send Email Notification
+on:
+  push:
+    branches: [ main ]
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL }}
+          password: ${{ secrets.PASS }}
+          subject: "nig in paris"
+          to: rodrigo.penam@iteso.mx, haziel.murillo@iteso.mx, victor.ortega@iteso.mx
+          from: ${{ secrets.MAIL }}
+          body: commit en feature _ a  nih
