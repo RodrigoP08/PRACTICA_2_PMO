@@ -1,8 +1,7 @@
-name: push notification (main)
+name: Send Email Notification
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 jobs:
   send-email:
     runs-on: ubuntu-latest
@@ -10,9 +9,8 @@ jobs:
       - name: notification
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.office365.com
-          server_port: 587
-          secure: false
+          server_address: smtp.gmail.com  
+          server_port: 465
           username: ${{ secrets.MAIL }}
           password: ${{ secrets.PASS }}
           subject: "shalom"
