@@ -16,5 +16,5 @@ jobs:
           password: ${{ secrets.PASS }}
           subject: "shalom"
           to: rodrigo.penam@iteso.mx, haziel.murillo@iteso.mx, victor.ortega@iteso.mx
-          from: ${{ secrets.EMAIL_USER }}
+          from: ${{ secrets.MAIL }}
           body: commit en main nih
