@@ -11,7 +11,8 @@ jobs:
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.office365.com
-          server_port: 465              # Puerto SSL
+          server_port: 587
+          secure: false
           username: ${{ secrets.MAIL }}
           password: ${{ secrets.PASS }}
           subject: "shalom"
